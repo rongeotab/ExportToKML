@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Export To KML</title>
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="ExportToKML.css">
+  <!-- build:js scripts/main.js -->
+  <script src="ExportToKML.js"></script>
+  
+</head>
+
+<body>
+  <div id="aEMPFormat" class="hidden">
+    
+        <header class="geotabPageHeader">
+          <h1 class="geotabPageName">Export To KML <span class="subdued">
+            <div class="help-tip">
+                  <p>This Add-In enables the users to export current device location data to KML format.<br>Select the device(s) and click the Export button to export current location data as a KML file. </p>
+            </div>
+          </span></h1>
+        </header>   
+  </div> 
+  <div class='fullpage'>  
+      <div class="box">
+         <div id="margin">
+            <fieldset class="inset">
+               <legend id="legends" >Select Date and Time</legend>
+               <!-- <label for="datetime" class="center" style="display: inline-block;">Select Date and Time</label> -->
+               <input id="datetime" type="datetime-local"  style="display: inline-block;" class="geotabFormEditField leftAlign"/> 
+            </fieldset>
+         </div>
+	  </div>
+  </div>         
+  <div class="box">
+	 <div id="margin">
+	   <fieldset class="inset">
+		<legend id="legends" >Select Vehicles</legend>
+		<div class="">
+		   <!-- <input type=hidden id="vehicleSearch"   type="search" placeholder="Search vehicles. . ." class="geotabFormEditField"/> -->
+		   <input id="vehicleSearch" type="search" placeholder="Search vehicles. . ." class="geotabFormEditField"/>		   
+		   <input type="checkbox" id="selectAll" class="geotabSwitchButton" >
+		   <label class="geotabButton" for="selectAll"> Select / Unselect All </label>
+		</div>
+		<div id="listBuild" class="checkmateListBuilder">
+		   <ul class="checkmateListTable" id="vehicleList">
+		   </ul>
+		</div>
+	   </fieldset>
+	 </div>
+  </div>
+
+  <div class="box">
+	 <fieldset class="inset">
+		<legend id="legends" >Export to KML</legend>
+		<button id="exportToKML" class="geotabButton"> Export </button>
+	 </fieldset>
+  </div>
+</body>
+</html>
